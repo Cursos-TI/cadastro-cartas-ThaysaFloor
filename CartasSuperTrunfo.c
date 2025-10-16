@@ -37,17 +37,17 @@ int main() {
     // ===== Entrada de dados Carta 1 =====
     printf("=== Cadastro da Carta 1 ===\n");
     printf("Digite a letra do Estado (A-H): ");
-    scanf(" %c", &estado1);                 
+    scanf(" %c", &estado1);
     printf("Digite o codigo da carta (ex: A01): ");
-    scanf("%4s", codigo1);                  // limita a 4 chars
+    scanf("%4s", codigo1);
     printf("Digite o nome da cidade: ");
-    scanf(" %[^\n]", nomeCidade1);          // lê até ENTER e aceita espaços
+    scanf(" %[^\n]", nomeCidade1);
     printf("Digite a populacao: ");
-    scanf("%f", &populacao1);              
+    scanf(" %f", &populacao1);
     printf("Digite a area (em km2): ");
-    scanf("%f", &area1);
+    scanf(" %f", &area1);
     printf("Digite o PIB (em bilhoes de reais): ");
-    scanf("%f", &pib1);
+    scanf(" %f", &pib1);
     printf("Digite o numero de pontos turisticos: ");
     scanf("%d", &pontosTuristicos1);
 
@@ -60,23 +60,21 @@ int main() {
     printf("Digite o nome da cidade: ");
     scanf(" %[^\n]", nomeCidade2);
     printf("Digite a populacao: ");
-    scanf("%f", &populacao2);
+    scanf(" %f", &populacao2);
     printf("Digite a area (em km2): ");
-    scanf("%f", &area2);
+    scanf(" %f", &area2);
     printf("Digite o PIB (em bilhoes de reais): ");
-    scanf("%f", &pib2);
+    scanf(" %f", &pib2);
     printf("Digite o numero de pontos turisticos: ");
     scanf("%d", &pontosTuristicos2);
 
     // ===== Calculos =====
-    // Densidade = população / área
-    densidade1 = (float)populacao1 / area1;
-    densidade2 = (float)populacao2 / area2;
+    densidade1 = populacao1 / area1;
+    densidade2 = populacao2 / area2;
 
-    // PIB per capita = (PIB em reais) / população
-    // Converter bilhões -> reais: * 1.000.000.000
-    pibPerCapita1 = (pib1 * 1000000000.0f) / (float)populacao1;
-    pibPerCapita2 = (pib2 * 1000000000.0f) / (float)populacao2;
+    // PIB per capita = (PIB em reais) / população  (bilhões -> reais)
+    pibPerCapita1 = (pib1 * 1000000000.0f) / populacao1;
+    pibPerCapita2 = (pib2 * 1000000000.0f) / populacao2;
 
     // ===== Saida de Dados =====
     printf("\n===== CARTA 1 =====\n");
