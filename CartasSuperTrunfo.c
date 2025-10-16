@@ -73,8 +73,8 @@ int main() {
     densidade2 = populacao2 / area2;
 
     // PIB per capita = (PIB em reais) / população  (bilhões -> reais)
-    pibPerCapita1 = (pib1 * 1000000000.0f) / populacao1;
-    pibPerCapita2 = (pib2 * 1000000000.0f) / populacao2;
+    pibPerCapita1 = pib1 / populacao1;
+    pibPerCapita2 = pib2 / populacao2;
 
     // ===== Saida de Dados =====
     printf("\n===== CARTA 1 =====\n");
